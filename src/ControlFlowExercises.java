@@ -64,28 +64,35 @@ public class ControlFlowExercises {
 
 //        Tables of Powers
 
-//        System.out.println("Please Enter an integer: ");
-//        Scanner scanner = new Scanner(System.in);
-//        int chosenInt = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+
+        boolean confirmation;
 //
-//        System.out.println("Number | Squared | Cubed");
-//        System.out.println("------ | ------- | -----");
+//        do{
 //
-//        for( int i =1 ; i <= chosenInt; i++){
-//            int squared = i * i;
-//            int cubed = squared * i;
-//            System.out.printf("%s      | %s       | %s %n", i , squared, cubed);
-//        }
+//            System.out.println("what number do you want to go up to");
+//            int usersNumber = sc.nextInt();
+//            System.out.println("Number | Squared | Cubed");
+//            System.out.println("------ | ------- | -----");
+//
+//            for( int i =1 ; i <= usersNumber; i++){
+//                int squared = i * i;
+//                int cubed = squared * i;
+//                System.out.printf("%s      | %s       | %s %n", i , squared, cubed);
+//            }
+//
+//            System.out.println("Continue? [y/n]");
+//            String userInput = sc.next();
+//            confirmation = userInput.equalsIgnoreCase("Y");
+//
+//        }while(confirmation);
+
 
 //        _________________________________________________________________________
 
 //        Letter Grades
 
-        System.out.println("Want to know your grade?");
-        Scanner scanner = new Scanner(System.in);
-        String answer = scanner.next();
-
-        if (answer.equalsIgnoreCase("yes")) {
+        do{
             System.out.println("Enter a number between 0 through 100 for your number grade: ");
             Scanner gradeNumber = new Scanner(System.in);
             int grade = gradeNumber.nextInt();
@@ -100,9 +107,11 @@ public class ControlFlowExercises {
             } else {
                 System.out.println("Your letter grade is a F");
             }
-        }
-        else{
-            System.out.println("We need your permission to continue.");
-        }
+            System.out.println("Continue? [y/n]");
+            String userInput = sc.next();
+            confirmation = userInput.equalsIgnoreCase("Y");
+
+        }while(confirmation);
+
     }
 }
