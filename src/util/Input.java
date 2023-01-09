@@ -51,7 +51,6 @@ public class Input {
     }
 
     public double getDouble(){
-        System.out.println("Enter a number: ");
         double userInput = scanner.nextDouble();
         return userInput * 2;
     }
