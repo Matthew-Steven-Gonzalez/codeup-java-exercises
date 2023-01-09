@@ -5,7 +5,7 @@ import util.Input;
 public class CircleApp {
     public static void main(String[] args) {
         Input input = new Input();
-        boolean moveAHead = true;
+        boolean moveAHead;
 
         do{
             System.out.println("Let's make a Circle. Enter the new circles radius: ");
