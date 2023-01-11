@@ -7,14 +7,14 @@ public class CircleApp {
 
         boolean moveAHead;
 
-        do{
+        do {
             System.out.println("Let's make a Circle. Enter the new circles radius: ");
             Input input = new Input();
             Circle newCircle;
             newCircle = new Circle(input.getDouble());
-            System.out.printf("Your new circle is created!%nThe Area of your new circle is: %s%nThe Circumference of your circle is: %s%n", newCircle.getArea(),newCircle.getCircumference());
+            System.out.printf("Your new circle is created!%nThe Area of your new circle is: %s%nThe Circumference of your circle is: %s%n", newCircle.getArea(), newCircle.getCircumference());
             System.out.println("Would you like to keep going?");
             moveAHead = input.yesNo();
-        }while(moveAHead);
+        } while (moveAHead);
     }
 }
