@@ -12,9 +12,9 @@ public class GradesApplication {
         adam.addGrade(80);
         adam.addGrade(75);
         adam.addGrade(68);
-        System.out.println(adam.getName());
-        System.out.println(adam.getGrades());
-        System.out.println("adam.getGradeAverage() = " + adam.getGradeAverage());
+//        System.out.println(adam.getName());
+//        System.out.println(adam.getGrades());
+//        System.out.println("adam.getGradeAverage() = " + adam.getGradeAverage());
 
 
         Student chel = new Student("Chel");
@@ -46,7 +46,7 @@ public class GradesApplication {
     }
 
     public static void InterAction(HashMap<String, Student> students) {
-        boolean confirmation = true;
+        boolean confirmation;
 
         do {
             System.out.printf("-ReportCard- %nHere are the current list of Student's usernames: %n --------------------%n");
@@ -60,8 +60,6 @@ public class GradesApplication {
                 System.out.printf("Name: " + students.get(child).getName() + "%nUsername: " + child + "%nCurrent Average: " + students.get(child).getGradeAverage() + "%n -------------------------%n");
             } else {
                 System.out.printf("The username you entered is not present.%n");
-                System.out.println("Would You like to look up another child?:");
-                confirmation = hallMonitor.yesNo();
 
             }
             System.out.println("Would You like to look up another child?:");
@@ -69,6 +67,6 @@ public class GradesApplication {
 
         } while (confirmation);
 
-        System.out.println("Goodbye and thank you for using the -ReportCard-");
+        System.out.println("Goodbye and thank you for using -ReportCard-");
     }
 }
