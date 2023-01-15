@@ -5,7 +5,9 @@ import java.util.List;
 
 public class Student {
     private String name;
-    private List<Integer> grades;
+    private ArrayList<Integer> grades;
+
+    public Student(){}
 
     public Student(String name) {
         this.name = name;
@@ -40,6 +42,6 @@ public class Student {
     }
 
     public void setGrades(List<Integer> grades) {
-        this.grades = grades;
+        this.grades = (ArrayList<Integer>) grades;
     }
 }
