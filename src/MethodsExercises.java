@@ -10,14 +10,14 @@ public class MethodsExercises {
     }
 
     public static void main(String[] args) {
-        System.out.println(add(3, 2));
-        System.out.println(sub(3, 2));
-        System.out.println(multi(3, 2));
-        System.out.println(divide(3, 2));
-        System.out.println(modded(3, 2));
-        getInteger(1, 10);
+//        System.out.println(add(3, 2));
+//        System.out.println(sub(3, 2));
+//        System.out.println(multi(3, 2));
+//        System.out.println(divide(3, 2));
+//        System.out.println(modded(3, 2));
+//        getInteger(1, 10);
         factorial();
-        rollDice();
+//        rollDice();
     }
 
     public static int add(int a, int b) {
@@ -28,8 +28,15 @@ public class MethodsExercises {
         return a - b;
     }
 
+//    public static int multi(int a, int b) {
+//        return a * b;
+//    }
     public static int multi(int a, int b) {
-        return a * b;
+        int returnedValue = 0;
+        for( int i = 0; i < b;i++){
+            returnedValue += a;
+        }
+        return returnedValue;
     }
 
     public static int divide(int a, int b) {
@@ -41,7 +48,7 @@ public class MethodsExercises {
     }
 
     public static int getInteger(int min, int max) {
-        System.out.println("Enter a number between 1 and 10:");
+        System.out.printf("Enter a number between %s and %s: \n",min,max);
         int userInput = scanner.nextInt();
         if (userInput >= min && userInput <= max) {
             return userInput;
@@ -51,9 +58,9 @@ public class MethodsExercises {
     }
 
     public static void factorial() {
-        Boolean moveAHead;
+        boolean moveAHead;
         do {
-            int UserNumber = getInteger(1, 10);
+            int UserNumber = getInteger(1, 65);
             long factorial = 1;
             for (int i = 1; i < UserNumber; i++) {
                 factorial *= i + 1;
@@ -65,7 +72,7 @@ public class MethodsExercises {
     }
 
     public static void rollDice() {
-        Boolean moveAHead;
+        boolean moveAHead;
         do {
             System.out.println("How many side to your dice, traveler?");
             int numberOfSide = scanner.nextInt();
