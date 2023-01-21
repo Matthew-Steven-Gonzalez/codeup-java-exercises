@@ -13,20 +13,34 @@ public class HighLow {
     }
 
     public static void theGame(){
-        Boolean moveAHead = true;
+        boolean moveAHead = true;
         System.out.println("A number has been choose. Make your guess!!...");
         long value = randomNumber(100);
+        int guessCount = 0;
         while(moveAHead){
             int guess = scanner.nextInt();
             if(guess == value){
                 System.out.println("Good Guess");
+                if(guessCount <= 10){
+                    System.out.printf("Nice work took you %s tries.",guessCount);
+                }
+                else{
+                    System.out.printf("Only took you %s tries...loser.",guessCount);
+                }
                 moveAHead = false;
+            }else if( guessCount == 15){
+                System.out.println("TOO MANY GUESSES!!!");
+                moveAHead = false;
+
             }
             else if( guess > value){
                 System.out.println("LOWER!!!");
+                guessCount++;
             }
             else if( guess < value){
                 System.out.println("HIGHER!!!");
+                guessCount++;
+
             }
         }
 
