@@ -90,20 +90,36 @@ public class ControlFlowExercises {
 
 //        _________________________________________________________________________
 
-//        Letter Grades
+//        Letter Grades w/bonus
 
         do{
             System.out.println("Enter a number between 0 through 100 for your number grade: ");
             Scanner gradeNumber = new Scanner(System.in);
             int grade = gradeNumber.nextInt();
-            if (grade <= 100 && grade >= 88) {
-                System.out.println("Your letter grade is an A");
-            } else if (grade <= 87 && grade >= 80) {
+            if (grade <= 100 && grade >= 97) {
+                System.out.println("Your letter grade is an A+");
+            } else if (grade <= 96 && grade >= 93) {
+                System.out.println("Your letter grade is a A");
+            }else if (grade <= 92 && grade >= 90) {
+                System.out.println("Your letter grade is a A-");
+            }else if (grade <= 89 && grade >= 87) {
+                System.out.println("Your letter grade is a B+");
+            }else if (grade <= 86 && grade >= 83) {
                 System.out.println("Your letter grade is a B");
-            } else if (grade <= 79 && grade >= 67) {
+            }else if (grade <= 82 && grade >= 80) {
+                System.out.println("Your letter grade is a B-");
+            } else if (grade <= 79 && grade >= 77) {
+                System.out.println("Your letter grade is a C+");
+            } else if (grade <= 76 && grade >= 73) {
                 System.out.println("Your letter grade is a C");
-            } else if (grade <= 66 && grade >= 60) {
+            }else if (grade <= 72 && grade >= 70) {
+                System.out.println("Your letter grade is a C-");
+            }else if (grade <= 69 && grade >= 67) {
+                System.out.println("Your letter grade is a D+");
+            }else if (grade <= 66 && grade >= 63) {
                 System.out.println("Your letter grade is a D");
+            }else if (grade <= 62 && grade >= 60) {
+                System.out.println("Your letter grade is a D-");
             } else {
                 System.out.println("Your letter grade is a F");
             }
