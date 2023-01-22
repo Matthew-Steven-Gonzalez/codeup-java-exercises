@@ -14,7 +14,7 @@ public class HighLow {
 
     public static void theGame(){
         boolean moveAHead = true;
-        System.out.println("A number has been choose. Make your guess!!...");
+        System.out.println("A number has been chosen. Make your guess!!...");
         long value = randomNumber(100);
         int guessCount = 0;
         while(moveAHead){
