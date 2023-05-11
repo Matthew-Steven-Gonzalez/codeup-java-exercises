@@ -5,11 +5,11 @@ public class Bob {
     public static void main(String[] args) {
 
         Boolean confirmation;
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Hi, I am Bob, Just your average lackadasical teenager.");
 
         do{
             System.out.println("So What up?");
-            Scanner scanner = new Scanner(System.in);
             String response = scanner.nextLine();
             if (response.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
@@ -24,6 +24,8 @@ public class Bob {
             String userInput = scanner.next();
             confirmation = userInput.equalsIgnoreCase("Yes");
         }while(confirmation);
+        scanner.close();
         System.out.println("Bob left...");
+    
     }
 }
